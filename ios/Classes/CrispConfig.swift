@@ -89,26 +89,29 @@ struct User {
     let nickName: String?
     let phone: String?
     let avatar: String?
+    let verificationSignature: String?
     let company: Company?
-    
-    init(email: String?, nickName: String?, phone: String?, avatar: String?, company: Company?) {
+
+    init(email: String?, nickName: String?, phone: String?, avatar: String?, verificationSignature: String?, company: Company?) {
         self.email = email
         self.nickName = nickName
         self.phone = phone
         self.avatar = avatar
+        self.verificationSignature = verificationSignature
         self.company = company
     }
-    
+
     static func fromJson(_ json: [String: Any]) -> User {
         return User(
             email: json["email"] as? String,
             nickName: json["nickName"] as? String,
             phone: json["phone"] as? String,
             avatar: json["avatar"] as? String,
+            verificationSignature: json["verificationSignature"] as? String,
             company: Company.fromJson(json["company"] as? [String: Any] ?? [:])
         )
     }
-    
+
 }
 
 struct CrispConfig {

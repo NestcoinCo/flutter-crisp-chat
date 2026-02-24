@@ -7,6 +7,7 @@ public class User {
     public String nickName = null;
     public String phone = null;
     public String avatar = null;
+    public String verificationSignature = null;
     public Company company = null;
 
     public static User fromJson(Map<String, Object> json) {
@@ -33,6 +34,12 @@ public class User {
             Object avatarObj = json.get("avatar");
             if (avatarObj != null) {
                 user.avatar = avatarObj.toString();
+            }
+        }
+        if (json.containsKey("verificationSignature")) {
+            Object signatureObj = json.get("verificationSignature");
+            if (signatureObj != null) {
+                user.verificationSignature = signatureObj.toString();
             }
         }
         if (json.containsKey("company")) {

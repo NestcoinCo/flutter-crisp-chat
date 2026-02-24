@@ -87,6 +87,13 @@ class User {
   /// This image will be displayed in the Crisp chat interface.
   final String? avatar;
 
+  /// The HMAC signature for identity verification.
+  ///
+  /// This is used to verify the user's identity with Crisp.
+  /// The signature should be generated server-side using your Crisp
+  /// secret key and the user's email address.
+  final String? verificationSignature;
+
   /// Information about the user's company.
   final Company? company;
 
@@ -96,12 +103,14 @@ class User {
   /// @param nickName (Optional) The user's nickname.
   /// @param phone (Optional) The user's phone number.
   /// @param avatar (Optional) URL to the user's avatar.
+  /// @param verificationSignature (Optional) HMAC signature for identity verification.
   /// @param company (Optional) The user's company details.
   User({
     this.email,
     this.nickName,
     this.phone,
     this.avatar,
+    this.verificationSignature,
     this.company,
   });
 
@@ -116,6 +125,7 @@ class User {
       "nickName": nickName,
       "phone": phone,
       "avatar": avatar,
+      "verificationSignature": verificationSignature,
       "company": company?.toJson(),
     };
   }
