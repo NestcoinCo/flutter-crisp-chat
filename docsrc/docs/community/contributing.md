@@ -112,9 +112,12 @@ flutter-crisp-chat/
 │   └── src/main/java/com/alaminkarno/flutter_crisp_chat/
 │       ├── FlutterCrispChatPlugin.java
 │       └── CrispChatNotificationService.java
-├── ios/                        # iOS native plugin code
-│   └── Classes/
-│       └── SwiftFlutterCrispChatPlugin.swift
+├── ios/                        # iOS native plugin code (Swift Package Manager)
+│   └── crisp_chat/
+│       ├── Package.swift
+│       └── Sources/crisp_chat/
+│           ├── FlutterCrispChatPlugin.swift
+│           └── CrispConfig.swift
 ├── lib/                        # Dart plugin code
 │   ├── crisp_chat.dart         # Main entry point
 │   └── src/

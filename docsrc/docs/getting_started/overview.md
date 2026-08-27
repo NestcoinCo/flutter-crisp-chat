@@ -38,18 +38,20 @@ next:
 
 | Platform | SDK | Version |
 |---|---|---|
-| Android | Crisp Android SDK | `2.0.16` |
-| iOS | Crisp iOS SDK | `~> 2.13.0` |
+| Android | Crisp Android SDK | `2.0.17` |
+| iOS | Crisp iOS SDK | `2.13.0`+ |
 
 ## Requirements
 
 | Platform | Minimum Version |
 |---|---|
-| Flutter | 3.0+ |
-| Dart | 2.15.0+ |
+| Flutter | 3.29.0+ |
+| Dart | 3.4.0+ |
 | Android | API 23 (Android 6.0) |
-| iOS | 13.0+ |
+| iOS | 13.0+ (Swift Package Manager) |
 | compileSdkVersion | 36 |
+
+> iOS uses **Swift Package Manager**; enable it with `flutter config --enable-swift-package-manager`. CocoaPods is not supported (since `3.0.0`).
 
 ## Quick Links
 

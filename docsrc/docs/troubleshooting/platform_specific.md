@@ -77,13 +77,7 @@ If the keyboard pushes the chat view up unexpectedly, ensure you're using Crisp 
 The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 13.0 to 18.0
 ```
 
-**Fix:** Update your `ios/Podfile`:
-
-```ruby
-platform :ios, '13.0'
-```
-
-Then delete `ios/Podfile.lock` and run `pod install --repo-update`.
+**Fix:** Set the iOS Deployment Target to `13.0` (or higher) on the `Runner` target in Xcode (**Runner → General → Minimum Deployments**), then run `flutter clean` and rebuild.
 
 ### Push notifications not working in development
 
@@ -108,12 +102,17 @@ If the app crashes when the user tries to take a photo or access the camera in c
 
 If `resetCrispChatSession` crashes on iOS, ensure you're using version `2.0.9` or later, which fixed this issue ([#20](https://github.com/alamin-karno/flutter-crisp-chat/issues/20)).
 
-### CocoaPods vs Swift Package Manager
+### Swift Package Manager
 
-The plugin supports both CocoaPods and Swift Package Manager (SPM) for iOS dependency management. If you encounter issues with one, try the other:
+The plugin uses Swift Package Manager (SPM) for iOS dependency management (defined in `ios/crisp_chat/Package.swift`). CocoaPods is no longer supported.
 
-- **CocoaPods:** Default for most Flutter projects. Uses `ios/crisp_chat.podspec`.
-- **SPM:** Available since version `2.4.2`. Uses `ios/crisp_chat/Package.swift`.
+Make sure Swift Package Manager is enabled in your Flutter toolchain:
+
+```bash
+flutter config --enable-swift-package-manager
+```
+
+Then run `flutter clean` followed by `flutter pub get` and rebuild.
 
 ## Need More Help?
 

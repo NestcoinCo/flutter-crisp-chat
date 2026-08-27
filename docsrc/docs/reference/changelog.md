@@ -19,6 +19,14 @@ next: false
 
 All notable changes to the `crisp_chat` package are documented here. For the full changelog, see [CHANGELOG.md on GitHub](https://github.com/alamin-karno/flutter-crisp-chat/blob/main/CHANGELOG.md).
 
+## [3.0.0]
+
+### Changed
+- **BREAKING (iOS):** Migrated the iOS plugin to Swift Package Manager (SPM) and removed CocoaPods support.
+  - The `ios/crisp_chat.podspec` has been removed; the plugin is now defined by `ios/crisp_chat/Package.swift`.
+  - iOS sources moved from `ios/Classes/` to `ios/crisp_chat/Sources/crisp_chat/` and the plugin is now pure Swift (the Objective-C shim was removed).
+  - Consuming apps must enable Swift Package Manager: `flutter config --enable-swift-package-manager`, and use Flutter `3.29.0` or newer.
+
 ## [2.4.5]
 
 ### Changed

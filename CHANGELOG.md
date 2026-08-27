@@ -1,4 +1,14 @@
 
+# [3.0.0]
+
+Changed
+---
+* **BREAKING (iOS):** Migrated the iOS plugin to Swift Package Manager (SPM) and removed CocoaPods support.
+  - The `ios/crisp_chat.podspec` has been removed. The plugin is now defined by `ios/crisp_chat/Package.swift`.
+  - iOS sources moved from `ios/Classes/` to `ios/crisp_chat/Sources/crisp_chat/` and the plugin is now pure Swift (the Objective-C shim `FlutterCrispChatPlugin.h/.m` was removed).
+  - Apps using this plugin must enable Swift Package Manager (`flutter config --enable-swift-package-manager`) and use Flutter `3.29.0` or newer.
+  - Raised the minimum environment to Flutter `>=3.29.0` / Dart `>=3.4.0`.
+
 # [2.4.5]
 
 Changed

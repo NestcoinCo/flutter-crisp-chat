@@ -37,13 +37,13 @@ java.net.SocketException: Permission denied
 
 **Fix:** Add `<uses-permission android:name="android.permission.INTERNET"/>` to your `AndroidManifest.xml`.
 
-### CocoaPods version conflict
+### Swift Package Manager resolution issues
 
 ```
-CocoaPods could not find compatible versions for pod "Crisp"
+Failed to resolve dependencies / could not resolve package "crisp-sdk-ios"
 ```
 
-**Fix:** Delete `ios/Podfile.lock` and run `pod install --repo-update` in the `ios/` directory.
+**Fix:** Ensure Swift Package Manager is enabled (`flutter config --enable-swift-package-manager`), then run `flutter clean` and `flutter pub get`. In Xcode you can also reset package caches via **File → Packages → Reset Package Caches**.
 
 ### Firebase Messaging not found (SDK build)
 

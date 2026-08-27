@@ -90,11 +90,7 @@ Add the following keys to `ios/Runner/Info.plist` for camera, photo library, and
 
 ### 2. Minimum Deployment Target
 
-The Crisp iOS SDK requires iOS 13.0+. Ensure your `ios/Podfile` has:
-
-```ruby
-platform :ios, '13.0'
-```
+The Crisp iOS SDK requires iOS 13.0+. Set the iOS Deployment Target to `13.0` (or higher) on the `Runner` target in Xcode (**Runner → General → Minimum Deployments**).
 
 ## Next Steps
 

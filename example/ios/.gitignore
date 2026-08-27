@@ -28,6 +28,10 @@ ServiceDefinitions.json
 Runner/GeneratedPluginRegistrant.*
 Runner/GoogleService-Info.plist
 
+# Redundant SPM lock written when the bare .xcodeproj is opened;
+# the authoritative one lives under Runner.xcworkspace/xcshareddata/swiftpm/.
+Runner.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
 # Exceptions to above rules.
 !default.mode1v3
 !default.mode2v3

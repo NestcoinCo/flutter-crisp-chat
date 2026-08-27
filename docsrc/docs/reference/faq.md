@@ -23,11 +23,11 @@ next:
 
 ### What platforms does this plugin support?
 
-Android and iOS. The plugin wraps the official Crisp Android SDK (`2.0.17`) and Crisp iOS SDK (`~> 2.13.0`).
+Android and iOS. The plugin wraps the official Crisp Android SDK (`2.0.17`) and Crisp iOS SDK (`2.13.0`+).
 
 ### What is the minimum Flutter version required?
 
-Flutter 3.0+ with Dart 2.15.0+. Android requires API 23+ (Android 6.0) and iOS requires 13.0+.
+Flutter 3.29.0+ with Dart 3.4.0+. Android requires API 23+ (Android 6.0) and iOS requires 13.0+. On iOS the plugin uses Swift Package Manager, which must be enabled with `flutter config --enable-swift-package-manager` (CocoaPods is not supported since `3.0.0`).
 
 ### Is this an official Crisp plugin?
 

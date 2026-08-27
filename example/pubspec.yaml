@@ -19,9 +19,9 @@ dependencies:
     # The example app is bundled with the plugin so we use a path dependency on
     # the parent directory to use the current plugin's version.
     path: ../
-  cupertino_icons: ^1.0.8
-  firebase_core: ^4.3.0
-  firebase_messaging: ^16.1.0
+  cupertino_icons: ^1.0.9
+  firebase_core: ^4.14.0
+  firebase_messaging: ^16.6.0
 
 dev_dependencies:
   flutter_test:
